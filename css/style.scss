@@ -111,8 +111,9 @@ nav {
       display: block;
     }
 
-    a {
-      justify-content: right;
+    li a {
+      display: block;
+      text-align: right;
     }
 
   }

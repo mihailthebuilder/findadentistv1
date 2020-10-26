@@ -121,10 +121,9 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   #right-nav-wrapper li {
     display: block;
   }
-  #right-nav-wrapper a {
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+  #right-nav-wrapper li a {
+    display: block;
+    text-align: right;
   }
 }
 
