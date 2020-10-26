@@ -1,0 +1,15 @@
+$pacific-blue: hsla(191, 55%, 53%, 1);
+$middle-blue: hsla(185, 37%, 65%, 1);
+$opal: hsla(185, 16%, 67%, 1);
+$ash-gray: hsla(103, 5%, 74%, 1);
+$almond: hsla(30, 55%, 89%, 1);
+
+body {
+  background: $ash-gray;
+  border: 0;
+  margin: 0;
+}
+
+nav {
+  background: $pacific-blue;
+}
