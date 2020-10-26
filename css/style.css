@@ -21,7 +21,7 @@ nav {
           justify-content: space-between;
 }
 
-nav a {
+nav a, nav #dropdown-wrapper {
   text-decoration: none;
   color: white;
   -webkit-transition: 0.3s;
@@ -29,7 +29,7 @@ nav a {
   padding: 0.8rem 1.2rem;
 }
 
-nav a:hover, nav a:active {
+nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:active {
   background: #85c1c7;
 }
 
@@ -57,11 +57,14 @@ nav a:hover, nav a:active {
   font-size: 1.5rem;
 }
 
+#dropdown-wrapper {
+  display: none;
+}
+
 #right-nav-wrapper {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   display: inline-block;
 }
 
@@ -82,6 +85,47 @@ nav a:hover, nav a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 576px) {
+  nav {
+    display: block;
+  }
+  #logo-dropdown-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #dropdown-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  #dropdown-wrapper img {
+    max-height: 1rem;
+  }
+  #right-nav-wrapper {
+    display: block;
+  }
+  #right-nav-wrapper li {
+    display: block;
+  }
+  #right-nav-wrapper a {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
 }
 
 /*============ BOOTSTRAP BREAK POINTS:

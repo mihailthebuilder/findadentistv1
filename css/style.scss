@@ -26,14 +26,14 @@ nav {
   display: flex;
   justify-content: space-between;
 
-  a {
+  a, #dropdown-wrapper {
     text-decoration: none;
     color: white;
     transition: $transition-time;
     padding: $nav-y-padding $nav-x-padding;
   }
 
-  a:hover, a:active {
+  a:hover, a:active, #dropdown-wrapper:hover, #dropdown-wrapper:active {
     background: $middle-blue;
   }
 }
@@ -55,11 +55,14 @@ nav {
   }
 }
 
+#dropdown-wrapper {
+  display: none;
+}
+
 #right-nav-wrapper {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   display: inline-block;
 
   li {
@@ -77,7 +80,43 @@ nav {
 }
 
 
+//--------------BREAKPOINTS------------------------
 
+//Phones
+@media (max-width: 576px) {
+  nav {
+    display: block;
+  }
+
+  #logo-dropdown-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #dropdown-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      max-height: 1rem;
+    }
+  }
+
+  #right-nav-wrapper {
+    display: block;
+
+    li {
+      display: block;
+    }
+
+    a {
+      justify-content: right;
+    }
+
+  }
+}
 
 
 
