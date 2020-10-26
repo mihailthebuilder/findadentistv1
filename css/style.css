@@ -13,14 +13,9 @@ body {
 
 nav {
   background: #45b1c9;
-  display: -ms-grid;
+  /*
   display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-}
-
-nav .logo-container {
-  grid-column: span 3;
+  grid-template-columns: repeat(12, 1fr);*/
 }
 
 nav a {
@@ -37,6 +32,8 @@ nav a {
   padding: 0.8rem 1.2rem;
   text-decoration: none;
   color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 nav a img {
@@ -48,6 +45,10 @@ nav a span {
   display: inline-block;
   font-family: 'Carter One', cursive;
   font-size: 1.5rem;
+}
+
+nav a:hover, nav a:active {
+  background: #85c1c7;
 }
 
 /*============ BOOTSTRAP BREAK POINTS:

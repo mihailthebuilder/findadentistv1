@@ -6,6 +6,7 @@ $almond: hsla(30, 55%, 89%, 1);
 
 $nav-x-padding: 1.2rem;
 $nav-y-padding: 0.8rem;
+$transition-time: 0.3s;
 
 html * {
   box-sizing: border-box;
@@ -22,34 +23,38 @@ body {
 
 nav {
   background: $pacific-blue;
+  /*
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);*/
 
-  .logo-container {
-    grid-column: span 3;
-  }
 
   a {
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-
+  
     padding: $nav-y-padding $nav-x-padding;
     text-decoration: none;
     color: white;
-
+  
+    transition: $transition-time;
+  
     img {
       max-height: 2rem;
       margin-right: 1rem;
     }
-
+  
     span {
       display: inline-block;
       font-family: 'Carter One', cursive;
       font-size: 1.5rem;
     }
-
   }
+  
+  a:hover, a:active {
+    background: $middle-blue;
+  }
+
 }
 
 
