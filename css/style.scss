@@ -4,12 +4,76 @@ $opal: hsla(185, 16%, 67%, 1);
 $ash-gray: hsla(103, 5%, 74%, 1);
 $almond: hsla(30, 55%, 89%, 1);
 
+$nav-x-padding: 1.2rem;
+$nav-y-padding: 0.7rem;
+
+html * {
+  box-sizing: border-box;
+}
+
 body {
-  background: $ash-gray;
-  border: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
   margin: 0;
+  background: $ash-gray;
 }
 
 nav {
   background: $pacific-blue;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  a {
+    grid-column: span 3;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: $nav-y-padding 0px;
+    text-decoration: none;
+    color: white;
+
+    img {
+      max-height: 2rem;
+      padding: 0px $nav-x-padding;
+    }
+
+    span {
+      display: inline-block;
+    }
+
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
