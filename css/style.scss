@@ -1,5 +1,6 @@
 $pacific-blue: hsla(191, 55%, 53%, 1);
 $middle-blue: hsla(185, 37%, 65%, 1);
+$middle-blue-transparent: hsla(185, 37%, 65%, 0.4);
 $opal: hsla(185, 16%, 67%, 1);
 $ash-gray: hsla(103, 5%, 74%, 1);
 $almond: hsla(30, 55%, 89%, 1);
@@ -18,7 +19,8 @@ body {
   margin: 0;
 
   font-family: 'Lato', sans-serif;
-  background: $ash-gray;
+  font-size: 1.1rem;
+  background: $almond;
 }
 
 .flip {
@@ -79,8 +81,50 @@ nav {
       flex-direction: row;
       align-items: center;
     }
-
   }
+}
+
+#hero-section {
+  height: 85vh;
+  background-image: linear-gradient(
+    115deg,
+    $middle-blue-transparent,$middle-blue-transparent), url("/img/hero.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 4px black;
+  font-weight: bold;
+
+  h1 {
+    color: white;
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: $almond;
+  }
+
+  input {
+    padding: 0.6rem;
+    font-size: 1.3rem;
+    width: 9.5rem;
+    text-align: center;
+    margin-right: 1rem;
+  }
+
+  button {
+    font-size: 1.3rem;
+    height: 100%;
+    padding: 0px 2rem; 
+  }
+
 }
 
 
@@ -119,7 +163,6 @@ nav {
       display: block;
       text-align: right;
     }
-
   }
 }
 

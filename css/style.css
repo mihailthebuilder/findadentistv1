@@ -8,7 +8,8 @@ body {
   overflow-x: hidden;
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background: #bbc0b9;
+  font-size: 1.1rem;
+  background: #f2e3d4;
 }
 
 .flip {
@@ -90,6 +91,54 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#hero-section {
+  height: 85vh;
+  background-image: linear-gradient(115deg, rgba(133, 193, 199, 0.4), rgba(133, 193, 199, 0.4)), url("/img/hero.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-shadow: 1px 1px 4px black;
+  font-weight: bold;
+}
+
+#hero-section h1 {
+  color: white;
+  margin: 0;
+  font-size: 3rem;
+}
+
+#hero-section h2 {
+  font-size: 2rem;
+  color: #f2e3d4;
+}
+
+#hero-section input {
+  padding: 0.6rem;
+  font-size: 1.3rem;
+  width: 9.5rem;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+#hero-section button {
+  font-size: 1.3rem;
+  height: 100%;
+  padding: 0px 2rem;
 }
 
 @media (max-width: 576px) {
