@@ -5,7 +5,7 @@ $ash-gray: hsla(103, 5%, 74%, 1);
 $almond: hsla(30, 55%, 89%, 1);
 
 $nav-x-padding: 1.2rem;
-$nav-y-padding: 0.7rem;
+$nav-y-padding: 0.8rem;
 
 html * {
   box-sizing: border-box;
@@ -15,6 +15,7 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   margin: 0;
+  
   background: $ash-gray;
 }
 
@@ -23,24 +24,28 @@ nav {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 
-  a {
+  .logo-container {
     grid-column: span 3;
+  }
 
-    display: flex;
+  a {
+    display: inline-flex;
     flex-direction: row;
     align-items: center;
 
-    padding: $nav-y-padding 0px;
+    padding: $nav-y-padding $nav-x-padding;
     text-decoration: none;
     color: white;
 
     img {
       max-height: 2rem;
-      padding: 0px $nav-x-padding;
+      margin-right: 1rem;
     }
 
     span {
       display: inline-block;
+      font-family: 'Carter One', cursive;
+      font-size: 1.5rem;
     }
 
   }
