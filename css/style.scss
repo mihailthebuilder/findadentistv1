@@ -23,41 +23,58 @@ body {
 
 nav {
   background: $pacific-blue;
-  /*
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);*/
-
+  display: flex;
+  justify-content: space-between;
 
   a {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-  
-    padding: $nav-y-padding $nav-x-padding;
     text-decoration: none;
     color: white;
-  
     transition: $transition-time;
-  
-    img {
-      max-height: 2rem;
-      margin-right: 1rem;
-    }
-  
-    span {
-      display: inline-block;
-      font-family: 'Carter One', cursive;
-      font-size: 1.5rem;
-    }
+    padding: $nav-y-padding $nav-x-padding;
   }
-  
+
   a:hover, a:active {
     background: $middle-blue;
   }
-
 }
 
+#logo-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
 
+  img {
+    max-height: 2rem;
+    margin-right: 1rem;
+  }
+
+  span {
+    display: inline-block;
+    font-family: 'Carter One', cursive;
+    font-size: 1.5rem;
+  }
+}
+
+#right-nav-wrapper {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: inline-block;
+
+  li {
+    display: inline-block;
+    height: 100%;
+
+    a {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+  }
+}
 
 
 
