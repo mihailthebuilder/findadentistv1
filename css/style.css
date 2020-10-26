@@ -11,6 +11,11 @@ body {
   background: #bbc0b9;
 }
 
+.flip {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
 nav {
   background: #45b1c9;
   display: -webkit-box;

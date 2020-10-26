@@ -21,6 +21,10 @@ body {
   background: $ash-gray;
 }
 
+.flip {
+  transform: rotate(-180deg);
+}
+
 nav {
   background: $pacific-blue;
   display: flex;

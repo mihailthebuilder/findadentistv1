@@ -2,9 +2,10 @@
 $(() => {
 
   //make dropdown display block and slide down
-  $("#dropdown-wrapper").click((event)=>{
+  $("#dropdown-wrapper").click(()=>{
 
     $("#right-nav-wrapper").slideToggle();
+    $("#dropdown-wrapper>img").toggleClass("flip");
 
   })
 });
