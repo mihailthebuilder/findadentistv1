@@ -1,3 +1,12 @@
+*, *:focus, *:hover {
+  outline: none;
+}
+
+* {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 html * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -30,8 +39,6 @@ nav {
 nav a, nav #dropdown-wrapper {
   text-decoration: none;
   color: white;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   padding: 0.8rem 1.2rem;
 }
 
@@ -127,18 +134,52 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   color: #f2e3d4;
 }
 
+#hero-section button, #hero-section input {
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+}
+
 #hero-section input {
   padding: 0.6rem;
-  font-size: 1.3rem;
   width: 9.5rem;
   text-align: center;
   margin-right: 1rem;
+  color: #45b1c9;
+  border: 0.2rem solid #45b1c9;
+}
+
+#hero-section input::-webkit-input-placeholder {
+  color: #45b1c9;
+}
+
+#hero-section input:-moz-placeholder {
+  color: #45b1c9;
+}
+
+#hero-section input::-moz-placeholder {
+  color: #45b1c9;
+}
+
+#hero-section input:-ms-input-placeholder {
+  color: #45b1c9;
+}
+
+#hero-section input:focus, #hero-section input:hover {
+  border-color: #f2e3d4;
 }
 
 #hero-section button {
-  font-size: 1.3rem;
   height: 100%;
   padding: 0px 2rem;
+  background: #85c1c7;
+  color: white;
+  border: 0.2rem solid #45b1c9;
+  cursor: pointer;
+}
+
+#hero-section button:hover {
+  background: #9db6b8;
+  border-color: #f2e3d4;
 }
 
 @media (max-width: 576px) {

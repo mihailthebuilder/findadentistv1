@@ -7,7 +7,21 @@ $almond: hsla(30, 55%, 89%, 1);
 
 $nav-x-padding: 1.2rem;
 $nav-y-padding: 0.8rem;
-$transition-time: 0.3s;
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
+*,*:focus,*:hover{
+  outline:none;
+}
+
+* {
+  transition: 0.3s;
+}
 
 html * {
   box-sizing: border-box;
@@ -35,7 +49,6 @@ nav {
   a, #dropdown-wrapper {
     text-decoration: none;
     color: white;
-    transition: $transition-time;
     padding: $nav-y-padding $nav-x-padding;
   }
 
@@ -111,18 +124,37 @@ nav {
     color: $almond;
   }
 
+  button, input {
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+  }
+
   input {
     padding: 0.6rem;
-    font-size: 1.3rem;
     width: 9.5rem;
     text-align: center;
     margin-right: 1rem;
+    @include placeholder {color: $pacific-blue};
+    color: $pacific-blue;
+    border: 0.2rem solid $pacific-blue;
+  }
+
+  input:focus, input:hover {
+    border-color: $almond;
   }
 
   button {
-    font-size: 1.3rem;
     height: 100%;
     padding: 0px 2rem; 
+    background: $middle-blue;
+    color: white;
+    border: 0.2rem solid $pacific-blue;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: $opal;
+    border-color: $almond;
   }
 
 }
