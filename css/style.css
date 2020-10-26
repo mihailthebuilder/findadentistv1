@@ -116,7 +116,7 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
     max-height: 1rem;
   }
   #right-nav-wrapper {
-    display: block;
+    display: none;
   }
   #right-nav-wrapper li {
     display: block;
