@@ -1,9 +1,13 @@
-
 //initialize dentist dataset
-let dentist_init = [{"chicken":"shit"},{"oh":"boy"},{"hey":"ho"}];
+let DENTISTS = [];
 
-//deep copies the dentist_init array of objects
-const DENTISTS = dentist_init.map(a => Object.assign({}, a));
+Papa.parse("data.csv", {
+    download: true,
+    header: true,
+    step: function(row) {
+      DENTISTS.push(row.data);
+    }
+});
 
 //only activate when document has been loaded
 $(() => {
