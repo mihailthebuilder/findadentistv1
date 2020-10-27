@@ -119,30 +119,33 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-shadow: 1px 1px 4px black;
-  font-weight: bold;
+  text-align: center;
 }
 
 #hero-section h1 {
   color: white;
   margin: 0;
   font-size: 3rem;
+  text-shadow: 1px 1px 4px black;
+  font-weight: bold;
 }
 
 #hero-section h2 {
   font-size: 2rem;
   color: #f2e3d4;
+  text-shadow: 1px 1px 4px black;
+  font-weight: bold;
 }
 
 #hero-section button, #hero-section input {
   border-radius: 0.4rem;
   font-size: 1.4rem;
+  text-align: center;
 }
 
 #hero-section input {
   padding: 0.6rem;
   width: 9.5rem;
-  text-align: center;
   margin-right: 1rem;
   color: #45b1c9;
   border: 0.2rem solid #45b1c9;
@@ -182,6 +185,19 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   border-color: #f2e3d4;
 }
 
+#hero-section p {
+  background: #fab7b9;
+  color: #8f2828;
+  padding: 1rem;
+  border: 0.1rem solid #8f2828;
+  border-radius: 0.2rem;
+  opacity: 0;
+}
+
+.container {
+  padding: 0rem 3rem;
+}
+
 @media (max-width: 576px) {
   nav {
     display: block;
@@ -219,6 +235,22 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   #right-nav-wrapper li a {
     display: block;
     text-align: right;
+  }
+  #hero-section h1 {
+    font-size: 1.8rem;
+  }
+  #hero-section h2 {
+    font-size: 1.3rem;
+  }
+  #hero-section input, #hero-section button {
+    font-size: 1rem;
+    display: inline-block;
+  }
+  #hero-section p {
+    padding: 0.5rem;
+  }
+  .container {
+    padding: 0 1rem;
   }
 }
 
