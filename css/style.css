@@ -133,9 +133,8 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 }
 
 #hero-section h2 {
-  font-size: 2rem;
   color: #f2e3d4;
-  text-shadow: 1px 1px 4px black;
+  text-shadow: 1px 1px 2.5px black;
   font-weight: bold;
 }
 
@@ -196,8 +195,25 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   opacity: 0;
 }
 
+#table-placeholder {
+  text-align: center;
+}
+
+#table-placeholder h2 {
+  color: #45b1c9;
+  text-shadow: 1px 1px 2px white;
+}
+
+.table-row {
+  display: none;
+}
+
 .container {
-  padding: 0rem 3rem;
+  padding: 3rem 3rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 @media (max-width: 576px) {
@@ -238,11 +254,11 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
     display: block;
     text-align: right;
   }
+  h2 {
+    font-size: 1.3rem;
+  }
   #hero-section h1 {
     font-size: 1.8rem;
-  }
-  #hero-section h2 {
-    font-size: 1.3rem;
   }
   #hero-section input, #hero-section button {
     font-size: 1rem;

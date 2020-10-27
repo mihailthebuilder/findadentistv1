@@ -58,4 +58,6 @@ function loadTable(inputPostcode,dentistArr) {
   //create copy of DENTISTS where you can add distance and sort
   console.log(inputPostcode,dentistArr);
 
+  
+
 }
