@@ -1,4 +1,3 @@
-
 //only activate when document has been loaded
 $(() => {
 
@@ -41,7 +40,7 @@ $(() => {
           },
 
           //go down and do the comparison
-          complete: loadTable(postcode.replace(/\s/g,''),dentistDataset) 
+          complete: ()=>{loadTable(postcode.replace(/\s/g,''),dentistDataset)}
       });
 
 
@@ -57,7 +56,7 @@ function loadTable(inputPostcode,dentistArr) {
 
   //create copy of DENTISTS where you can add distance and sort
   console.log(inputPostcode,dentistArr);
-
   
+  console.log(dentistArr[2]);
 
 }
