@@ -79,6 +79,8 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   margin: 0;
   padding: 0;
   display: inline-block;
+  -webkit-transition: none;
+  transition: none;
 }
 
 #right-nav-wrapper li {

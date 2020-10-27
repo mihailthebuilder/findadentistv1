@@ -86,6 +86,7 @@ nav {
   margin: 0;
   padding: 0;
   display: inline-block;
+  transition: none;
 
   li {
     display: inline-block;
@@ -204,6 +205,7 @@ nav {
   }
 
   #right-nav-wrapper {
+    
     display: none;
 
     li {

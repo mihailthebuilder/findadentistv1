@@ -1,3 +1,10 @@
+
+//initialize dentist dataset
+let dentist_init = [{"chicken":"shit"},{"oh":"boy"},{"hey":"ho"}];
+
+//deep copies the dentist_init array of objects
+const DENTISTS = dentist_init.map(a => Object.assign({}, a));
+
 //only activate when document has been loaded
 $(() => {
 
@@ -21,6 +28,7 @@ $(() => {
 
     } else {
 
+      //ensure validation tooltip is hidden
       $("#hero-section p").css("opacity",0);
 
       //go down and do the comparison
