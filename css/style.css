@@ -138,15 +138,6 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   font-weight: bold;
 }
 
-#hero-section button, #hero-section input {
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  text-align: center;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  border: 0.2rem solid #45b1c9;
-}
-
 #hero-section input {
   width: 9.5rem;
   margin-right: 1rem;
@@ -174,11 +165,8 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 }
 
 #hero-section button {
-  padding-left: 2rem;
-  padding-right: 2rem;
   background: #85c1c7;
   color: white;
-  cursor: pointer;
 }
 
 #hero-section button:hover {
@@ -202,6 +190,17 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 #table-placeholder h2 {
   color: #45b1c9;
   text-shadow: 1px 1px 2px white;
+  margin-top: 0;
+}
+
+#table-placeholder button {
+  background: #85c1c7;
+  color: white;
+}
+
+#table-placeholder button:hover {
+  background: #9db6b8;
+  border-color: #85c1c7;
 }
 
 .table-row {
@@ -214,6 +213,21 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 
 h2 {
   font-size: 2rem;
+}
+
+.trigger {
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  text-align: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border: 0.2rem solid #45b1c9;
+}
+
+button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
 }
 
 @media (max-width: 576px) {
@@ -257,18 +271,18 @@ h2 {
   #hero-section h1 {
     font-size: 1.8rem;
   }
-  #hero-section input, #hero-section button {
-    font-size: 1rem;
-    display: inline-block;
-  }
   #hero-section p {
     padding: 0.5rem;
   }
   .container {
-    padding: 0 1rem;
+    padding: 2rem 1rem;
   }
   h2 {
     font-size: 1.3rem;
+  }
+  .trigger {
+    font-size: 1rem;
+    display: inline-block;
   }
 }
 

@@ -130,15 +130,6 @@ nav {
     font-weight: bold;
   }
 
-  button, input {
-    border-radius: 0.4rem;
-    font-size: 1.4rem;
-    text-align: center;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
-    border: 0.2rem solid $pacific-blue;
-  }
-
   input {
     width: 9.5rem;
     margin-right: 1rem;
@@ -151,11 +142,8 @@ nav {
   }
 
   button {
-    padding-left: 2rem;
-    padding-right: 2rem;
     background: $middle-blue;
     color: white;
-    cursor: pointer;
   }
 
   button:hover {
@@ -179,7 +167,19 @@ nav {
   h2 {
     color: $pacific-blue;
     text-shadow: 1px 1px 2px white;
+    margin-top: 0;
   }
+
+  button {
+    background: $middle-blue;
+    color: white;
+  }
+
+  button:hover {
+    background: $opal;
+    border-color: $middle-blue;
+  }
+
 }
 
 .table-row {
@@ -192,6 +192,21 @@ nav {
 
 h2 {
   font-size: 2rem;
+}
+
+.trigger {
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  text-align: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border: 0.2rem solid $pacific-blue;
+}
+
+button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
 }
 
 //--------------BREAKPOINTS------------------------
@@ -237,24 +252,26 @@ h2 {
     h1 {
       font-size: 1.8rem;
     }
-
-    input, button {
-      font-size: 1rem;
-      display: inline-block;
-    }
     
     p {
       padding: 0.5rem;
     }
+
   }
 
   .container {
-    padding: 0 1rem;
+    padding: 2rem 1rem;
   }
   
   h2 {
     font-size: 1.3rem;
   }
+
+  .trigger {
+    font-size: 1rem;
+    display: inline-block;
+  }
+
 }
 
 
