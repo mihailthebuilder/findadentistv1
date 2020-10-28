@@ -23,10 +23,8 @@ $nav-y-padding: 0.8rem;
 
 * {
   transition: 0.3s;
-}
-
-html * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {

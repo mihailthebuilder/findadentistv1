@@ -5,9 +5,6 @@ class Dentist {
     this.price_filling = parseInt(obj["price_filling"]);
     this.price_crown = parseInt(obj["price_crown"]);
     this.price_root = parseInt(obj["price_root"]);
-
-    //distance generated randomly
-    this.distance = Math.floor(Math.random()*100);
   }
 };
 
@@ -21,57 +18,101 @@ $(() => {
     $("#right-nav-wrapper").slideToggle();
     $("#dropdown-wrapper>img").toggleClass("flip");
  
-  })
+  });
+
+  let dentistFileData = [];
+
+  //load dataset; once loaded, activate all table functionalities
+  Papa.parse("data.csv", {
+    download: true,
+    header: true,
+
+    step: function(row) {
+      
+      //add file row into dentist dataset
+      //the last row shows as "undefined" so needs to be avoided
+      if (row.data["name"] != undefined) {
+        
+        dentistFileData.push(row.data);
+      }
+    },
+
+    //go down and activate the table
+    complete: ()=>{tableActivate(dentistFileData)}
+  });
+
+});
+
+
+function tableActivate(dentistFileData) {
 
   //trigger when start comparison button clicked
   $("#hero-section button").click(()=>{
 
-    let postcode = $("#hero-section input").val().toUpperCase();
+    hideTable(()=>{
+      let postcode = $("#hero-section input").val().toUpperCase();
 
-    //validate whether postcode is in correct format
-    let postcodeCheck = /^[A-Z]{1,2}\d{1,2}\s?\d{1,2}[A-Z]{1,2}$/.test(postcode);
-    
-    if (!postcodeCheck) {
+      //validate whether postcode is in correct format
+      let postcodeCheck = /^[A-Z]{1,2}\d{1,2}\s?\d{1,2}[A-Z]{1,2}$/.test(postcode);
       
-      incorrectPostcode();
+      //if postcode incorrect, trigger corresponding event
+      if (!postcodeCheck) {
+        //insert tooltip saying that format is incorrect
+        $("#hero-section p").css("opacity",100);
 
-    } else {
+        //show table placeholder
+        $("#table-placeholder").fadeIn();  
 
-      //if correct postcode...
-      //ensure validation tooltip is hidden
-      $("#hero-section p").css("opacity",0);
+      //if postcode correct...
+      } else {
 
-      //initialize dentist dataset
-      let dentistDataset = [];
+        //scroll to the table section
+        $([document.documentElement, document.body]).animate({
+          scrollTop: $("#table-section").offset().top
+        }, 1000);
 
-      //parse csv file that holds the dataset
-      Papa.parse("data.csv", {
-          download: true,
-          header: true,
+        //ensure that the validation postcode elem is hidden  
+        $("#hero-section p").css("opacity",0);
 
-          step: function(row) {
-            
-            //add file row into dentist dataset
-            //the last row shows as "undefined" so needs to be avoided
-            if (row.data["name"] != undefined) {
-              
-              let newDentist = new Dentist(row.data);
-              dentistDataset.push(newDentist);
-            }
-          },
+        /*add distance to dentist dataset and declare it as a constant to avoid interference as now the dataset has been formally initialised*/
+        const dentistDataset = dentistFileData.map((obj)=> {
+          let dist = Math.floor(Math.random()*50).toString();
+          return {...obj,"distance":dist};
+        });
 
-          //go down and do the comparison
-          complete: ()=>{loadTable(postcode.replace(/\s/g,''),dentistDataset)}
-      });
-    }
+        //load table header & show
+        loadTableHeader(dentistDataset);
+
+        //load table content & show
+        loadTableContent(dentistDataset,"distance"); 
+      }
+    })   
   })
-});
-
-function incorrectPostcode() {
-  //insert tooltip saying that format is incorrect
-  $("#hero-section p").css("opacity",100);
 }
 
+function loadTableHeader() {
+  
+}
+
+//load table with data and jQuery listeners
+
+function loadTableContent(dentistArr,key,desc=false) {
+
+  //sort dentist table & populate rows
+
+  $("#table-placeholder").fadeOut("slow",()=>{
+    $(".table-row").fadeIn()
+  });
+  
+}
+
+function hideTable(callback) {
+  $(".table-row").fadeOut("slow",callback);
+};
+
+
+
+/*
 function sortDentists(arr,key,desc = false) {
   
   let order = 1;
@@ -80,18 +121,4 @@ function sortDentists(arr,key,desc = false) {
   }
 
   arr.sort((a,b)=>{return (a[key]-b[key])*order});
-}
-
-//load table with data and jQuery listeners
-
-function loadTable(inputPostcode,dentistArr) {
-
-  sortDentists(dentistArr,"distance");
-
-  
-
-  $("#table-placeholder").fadeOut("slow",()=>{
-    $(".table-row").fadeIn()
-  });
-  
-}
+}*/

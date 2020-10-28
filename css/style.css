@@ -5,11 +5,9 @@
 * {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-html * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
