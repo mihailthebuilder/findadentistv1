@@ -108,7 +108,7 @@ function loadTableHeader(dentistDataset) {
     //create table header cell html with inner text and 
     //desc-toggle attribute which will decide whether to sort ascending or descending
     let cellText = dataColumn["heading"];
-    let $column_header = $(`<span>`,{text:cellText,"desc-toggle":1});
+    let $column_header = $(`<div>`,{text:cellText,"desc-toggle":1});
     
       //add click->sort capabilities, except name column
     if (dataColumn["obj_key"] != "name") {

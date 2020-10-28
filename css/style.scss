@@ -2,8 +2,9 @@ $pacific-blue: hsla(191, 55%, 53%, 1);
 $middle-blue: hsla(185, 37%, 65%, 1);
 $middle-blue-transparent: hsla(185, 37%, 65%, 0.4);
 $opal: hsla(185, 16%, 67%, 1);
-$ash-gray: hsla(103, 5%, 74%, 1);
 $almond: hsla(30, 55%, 89%, 1);
+$davys-grey: hsla(330,1%,35%,1);
+
 $error-background: hsla(359, 87%, 85%,1);
 $error-text: hsla(0, 56%, 36%,1);
 
@@ -202,6 +203,39 @@ button {
   padding-left: 2rem;
   padding-right: 2rem;
   cursor: pointer;
+}
+
+#table-wrapper {
+  margin-top: 10rem;
+
+  border: 3px solid $davys-grey; 
+  border-radius: 0.2rem;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2.5px black;
+  div {
+    padding: 1rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header {
+  background: $davys-grey;
+}
+
+.even {
+  background: $pacific-blue;
+}
+
+.odd {
+  background: $middle-blue;
 }
 
 //--------------BREAKPOINTS------------------------

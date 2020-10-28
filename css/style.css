@@ -226,6 +226,47 @@ button {
   cursor: pointer;
 }
 
+#table-wrapper {
+  margin-top: 10rem;
+  border: 3px solid #5a5859;
+  border-radius: 0.2rem;
+}
+
+.table-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2.5px black;
+}
+
+.table-row div {
+  padding: 1rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  background: #5a5859;
+}
+
+.even {
+  background: #45b1c9;
+}
+
+.odd {
+  background: #85c1c7;
+}
+
 @media (max-width: 576px) {
   nav {
     display: block;
