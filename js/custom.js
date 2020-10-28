@@ -50,8 +50,6 @@ function tableActivate(dentistFileData) {
 
     hideTable(()=>{
 
-      console.log("does it get here?");
-
       let postcode = $("#hero-section input").val().toUpperCase();
 
       //validate whether postcode is in correct format
