@@ -142,14 +142,15 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   border-radius: 0.4rem;
   font-size: 1.4rem;
   text-align: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border: 0.2rem solid #45b1c9;
 }
 
 #hero-section input {
-  padding: 0.6rem;
   width: 9.5rem;
   margin-right: 1rem;
   color: #45b1c9;
-  border: 0.2rem solid #45b1c9;
 }
 
 #hero-section input::-webkit-input-placeholder {
@@ -173,11 +174,10 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 }
 
 #hero-section button {
-  height: 100%;
-  padding: 0px 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background: #85c1c7;
   color: white;
-  border: 0.2rem solid #45b1c9;
   cursor: pointer;
 }
 
@@ -254,9 +254,6 @@ h2 {
     display: block;
     text-align: right;
   }
-  h2 {
-    font-size: 1.3rem;
-  }
   #hero-section h1 {
     font-size: 1.8rem;
   }
@@ -269,6 +266,9 @@ h2 {
   }
   .container {
     padding: 0 1rem;
+  }
+  h2 {
+    font-size: 1.3rem;
   }
 }
 

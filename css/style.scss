@@ -134,15 +134,16 @@ nav {
     border-radius: 0.4rem;
     font-size: 1.4rem;
     text-align: center;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border: 0.2rem solid $pacific-blue;
   }
 
   input {
-    padding: 0.6rem;
     width: 9.5rem;
     margin-right: 1rem;
     @include placeholder {color: $pacific-blue};
     color: $pacific-blue;
-    border: 0.2rem solid $pacific-blue;
   }
 
   input:focus, input:hover {
@@ -150,11 +151,10 @@ nav {
   }
 
   button {
-    height: 100%;
-    padding: 0px 2rem; 
+    padding-left: 2rem;
+    padding-right: 2rem;
     background: $middle-blue;
     color: white;
-    border: 0.2rem solid $pacific-blue;
     cursor: pointer;
   }
 
@@ -231,10 +231,6 @@ h2 {
       text-align: right;
     }
   }
-  
-  h2 {
-    font-size: 1.3rem;
-  }
 
   #hero-section {
 
@@ -255,7 +251,10 @@ h2 {
   .container {
     padding: 0 1rem;
   }
-
+  
+  h2 {
+    font-size: 1.3rem;
+  }
 }
 
 
