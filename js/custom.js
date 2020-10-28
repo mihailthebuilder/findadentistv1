@@ -65,6 +65,9 @@ function tableActivate(dentistFileData) {
         //show table placeholder
         $("#table-placeholder").fadeIn();  
 
+        //delete all table data
+        $(".table-row").remove();
+
       //if postcode correct...
       } else {
 
