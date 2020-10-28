@@ -110,15 +110,17 @@ function loadTableHeader(dentistDataset) {
     let cellText = dataColumn["heading"];
     let $column_header = $(`<span>`,{text:cellText,"desc-toggle":1});
     
-    //add click->sort capabilities
-    $column_header.click(()=>{
-      
-      //once cell clicked, it will sort table by corresponding column
-      loadTableContent(dentistDataset,dataColumn["obj_key"],$column_header.attr("desc-toggle"));
+      //add click->sort capabilities, except name column
+    if (dataColumn["obj_key"] != "name") {
+      $column_header.click(()=>{
+        
+        //once cell clicked, it will sort table by corresponding column
+        loadTableContent(dentistDataset,dataColumn["obj_key"],$column_header.attr("desc-toggle"));
 
-      //the desc-toggle will be toggled to the opposite
-      $column_header.attr("desc-toggle",parseInt($column_header.attr("desc-toggle"))*-1);
-    })
+        //the desc-toggle will be toggled to the opposite
+        $column_header.attr("desc-toggle",parseInt($column_header.attr("desc-toggle"))*-1);
+      })
+    };
     
     //add child to heading row element
     $header.append($column_header);
@@ -138,7 +140,7 @@ function loadTableContent(dentistDataset,key,order=1) {
   console.log(dentistDataset,key,order);
 
   $("#table-placeholder").fadeOut("slow",()=>{
-    $(".table-row").fadeIn()
+    $("#table-wrapper").fadeIn()
   });
   
 }
@@ -147,10 +149,8 @@ function loadTableContent(dentistDataset,key,order=1) {
 function hideTable(callback) {
 
   //need to check, otherwise calllback doesn't get activated
-  if($(".table-row").length>0) {
-    $(".table-row").fadeOut("slow",callback);
+  $("#table-wrapper").fadeOut("slow",callback);
   
-  } else {callback();};
 };
 
 
