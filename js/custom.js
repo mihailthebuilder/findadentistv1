@@ -72,11 +72,21 @@ function incorrectPostcode() {
   $("#hero-section p").css("opacity",100);
 }
 
+function sortDentists(arr,key,desc = false) {
+  
+  let order = 1;
+  if (desc) {
+    order = -1;
+  }
+
+  arr.sort((a,b)=>{return (a[key]-b[key])*order});
+}
+
 //load table with data and jQuery listeners
 
 function loadTable(inputPostcode,dentistArr) {
 
-  //create copy of DENTISTS where you can add distance and sort
-  console.log(inputPostcode,dentistArr);
+  sortDentists(dentistArr,"distance");
+  console.log(dentistArr);
   
 }
