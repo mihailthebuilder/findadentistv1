@@ -203,12 +203,6 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
   border-color: #85c1c7;
 }
 
-.table-row {
-  display: none;
-  -webkit-transition: none;
-  transition: none;
-}
-
 .container {
   padding: 3rem 3rem;
 }

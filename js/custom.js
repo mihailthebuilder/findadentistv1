@@ -1,12 +1,11 @@
-class Dentist {
-  constructor(obj) {
-    this.name = obj["name"];
-    this.postcode = obj["postcode"];
-    this.price_filling = parseInt(obj["price_filling"]);
-    this.price_crown = parseInt(obj["price_crown"]);
-    this.price_root = parseInt(obj["price_root"]);
-  }
-};
+const TABLE_ORDER = [
+  {"order": 0,"heading": "Name","obj_key": "name"}
+  , {"order": 1,"heading": "Postcode","obj_key": "postcode"}
+  , {"order": 2,"heading": "Distance","obj_key": "distance"}
+  , {"order": 3,"heading": "Filling","obj_key": "price_filling"}
+  , {"order": 4,"heading": "Crown","obj_key": "price_crown"}
+  , {"order": 5,"heading": "Root Canal","obj_key": "price_root"}
+]
 
 
 //only activate when document has been loaded
@@ -50,6 +49,9 @@ function tableActivate(dentistFileData) {
   $("#hero-section button").click(()=>{
 
     hideTable(()=>{
+
+      console.log("does it get here?");
+
       let postcode = $("#hero-section input").val().toUpperCase();
 
       //validate whether postcode is in correct format
@@ -90,15 +92,49 @@ function tableActivate(dentistFileData) {
   })
 }
 
-function loadTableHeader() {
-  
+//load table header & show
+function loadTableHeader(dentistDataset) {
+
+  //create table header
+  let $header = $("<div>",{class:"table-row header"});
+
+  //add each cell to header
+  for (let i=0;i<TABLE_ORDER.length;i++) {
+
+    //get corresponding column data attributes
+    let dataColumn = TABLE_ORDER.filter(elem => elem["order"]==i)[0];
+
+    //create table header cell html with inner text and 
+    //desc-toggle attribute which will decide whether to sort ascending or descending
+    let cellText = dataColumn["heading"];
+    let $column_header = $(`<span>`,{text:cellText,"desc-toggle":1});
+    
+    //add click->sort capabilities
+    $column_header.click(()=>{
+      
+      //once cell clicked, it will sort table by corresponding column
+      loadTableContent(dentistDataset,dataColumn["obj_key"],$column_header.attr("desc-toggle"));
+
+      //the desc-toggle will be toggled to the opposite
+      $column_header.attr("desc-toggle",parseInt($column_header.attr("desc-toggle"))*-1);
+    })
+    
+    //add child to heading row element
+    $header.append($column_header);
+
+  }
+
+
+  $("#table-section").append($header);
+
 }
 
 //load table with data and jQuery listeners
 
-function loadTableContent(dentistArr,key,desc=false) {
+function loadTableContent(dentistDataset,key,order=1) {
 
   //sort dentist table & populate rows
+  console.log(dentistDataset,key,order);
 
   $("#table-placeholder").fadeOut("slow",()=>{
     $(".table-row").fadeIn()
@@ -106,8 +142,14 @@ function loadTableContent(dentistArr,key,desc=false) {
   
 }
 
+//ensures table is hidden
 function hideTable(callback) {
-  $(".table-row").fadeOut("slow",callback);
+
+  //need to check, otherwise calllback doesn't get activated
+  if($(".table-row").length>0) {
+    $(".table-row").fadeOut("slow",callback);
+  
+  } else {callback();};
 };
 
 
