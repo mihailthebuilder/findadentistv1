@@ -87,6 +87,11 @@ function sortDentists(arr,key,desc = false) {
 function loadTable(inputPostcode,dentistArr) {
 
   sortDentists(dentistArr,"distance");
-  console.log(dentistArr);
+
+  
+
+  $("#table-placeholder").fadeOut("slow",()=>{
+    $(".table-row").fadeIn()
+  });
   
 }

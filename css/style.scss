@@ -163,6 +163,7 @@ nav {
 
 #table-placeholder {
   text-align: center;
+  transition: none;
 
   h2 {
     color: $pacific-blue;
@@ -184,6 +185,7 @@ nav {
 
 .table-row {
   display: none;
+  transition: none;
 }
 
 .container {

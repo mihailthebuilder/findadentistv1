@@ -185,6 +185,8 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 
 #table-placeholder {
   text-align: center;
+  -webkit-transition: none;
+  transition: none;
 }
 
 #table-placeholder h2 {
@@ -205,6 +207,8 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 
 .table-row {
   display: none;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .container {
