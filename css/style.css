@@ -385,6 +385,50 @@ button {
   transition: none;
 }
 
+#about-section {
+  background: #45b1c9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-section h2 {
+  color: #f2e3d4;
+  text-shadow: 1px 1px 2px #5a5859;
+  text-align: center;
+}
+
+#about-section > div {
+  width: 30rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+#about-section > div p {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+#about-section > div img {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   #table-wrapper {
     border: none;
@@ -501,6 +545,23 @@ button {
   }
   .prices > div input {
     text-align: left;
+  }
+  #about-section > div {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 0.5vw;
+  }
+  #about-section > div > div {
+    margin-top: 2rem;
+  }
+  #about-section > div > div p {
+    text-align: center;
   }
 }
 

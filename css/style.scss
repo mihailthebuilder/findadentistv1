@@ -358,6 +358,39 @@ button {
   transition: none;
 }
 
+#about-section {
+  background: $pacific-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: $almond;
+    text-shadow: 1px 1px 2px $davys-grey;
+    text-align: center;
+  }
+
+  >div {
+    width: 30rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+    column-gap: 2rem;
+
+    p {
+      margin: 0;
+      color: white;
+      text-shadow: 1px 1px 1px black;
+    }
+
+    img {
+      width: 100%;
+    }
+
+  }
+}
+
 //--------------BREAKPOINTS------------------------
 
 //tablets
@@ -499,6 +532,20 @@ button {
 
     input {
       text-align: left;
+    }
+  }
+
+  #about-section>div {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5vw;
+
+    >div {
+      margin-top: 2rem;
+      p {
+        text-align: center;
+      }
     }
   }
 
