@@ -82,18 +82,16 @@ function tableActivate(dentistFileData) {
           return {...obj,"distance":dist};
         });
 
-        //load table header & show
-        loadTableHeader(dentistDataset);
+        //load table
+        loadTable(dentistDataset);
 
-        //load table content & show
-        loadTableContent(dentistDataset,"distance"); 
       }
     })   
   })
 }
 
 //load table header & show
-function loadTableHeader(dentistDataset) {
+function loadTable(dentistDataset) {
 
   //create table header
   let $header = $("<div>",{class:"table-row header"});
@@ -110,20 +108,56 @@ function loadTableHeader(dentistDataset) {
     
     //add child to heading row element
     $header.append($column_header);
-
   }
 
+  $("#table-wrapper").append($header);
 
-  $("#table-section").append($header);
+  //sort dentist table by key (distance)
+  let sortedDentists = dentistDataset.map(a=>({...a})).sort((a,b)=>{return (a["distance"]-b["distance"])});
 
-}
+  console.log(sortedDentists);
 
-//load table with data and jQuery listeners
+  //loop through dentist array to generate each row and add to table
+  for (let i=0;i<sortedDentists.length;i++) {
 
-function loadTableContent(dentistDataset,key,order=1) {
+    //generate row container with appropriate classes
+    let $row = $("<div>",{class: "table-row " +i%2==0? "even" : "odd"});
 
-  //sort dentist table & populate rows
-  console.log(dentistDataset,key,order);
+    //name column
+    let $row_name = $("<div>",{class:"row-name",text:sortedDentists[i]["name"]});
+    $row.append($row_name);
+
+    //distance column
+    let $row_distance = $("<div>",{class:"row-distance"});
+    $row_distance.append($("<div>",{class:"row-attribute",text:"Distance:"}));
+    $row_distance.append($("<div>",{text:sortedDentists[i]["distance"]}));
+    $row.append($row_distance);
+
+    //filling column
+    let $row_filling = $("<div>",{class:"row-filling"});
+    $row_filling.append($("<div>",{class:"row-attribute",text:"Filling:"}));
+    $row_filling.append($("<div>",{text:sortedDentists[i]["price_filling"]}));
+    $row.append($row_filling);
+
+    //crown column
+    let $row_crown = $("<div>",{class:"row-crown"});
+    $row_crown.append($("<div>",{class:"row-crown",text:"Crown:"}));
+    $row_crown.append($("<div>",{text:sortedDentists[i]["price_crown"]}));
+    $row.append($row_crown);
+
+    //root column
+    let $row_root = $("<div>",{class:"row-root"});
+    $row_distance.append($("<div>",{class:"row-root",text:"Root canal:"}));
+    $row_distance.append($("<div>",{text:sortedDentists[i]["price_root"]}));
+    $row.append($row_root);
+
+    //button column
+    let $row_button = $("<div>",{class:"row-button"});
+    $row_button.append($("<button>",{"type":"button",text:"Book now"}));
+    $row.append($row_button);
+
+    $("#table-wrapper").append($row);
+  }
 
   $("#table-placeholder").fadeOut("slow",()=>{
     $("#table-wrapper").fadeIn()
@@ -138,16 +172,3 @@ function hideTable(callback) {
   $("#table-wrapper").fadeOut("slow",callback);
   
 };
-
-
-
-/*
-function sortDentists(arr,key,desc = false) {
-  
-  let order = 1;
-  if (desc) {
-    order = -1;
-  }
-
-  arr.sort((a,b)=>{return (a[key]-b[key])*order});
-}*/
