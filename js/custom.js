@@ -1,10 +1,9 @@
 const TABLE_ORDER = [
   {"order": 0,"heading": "Name","obj_key": "name"}
-  , {"order": 1,"heading": "Postcode","obj_key": "postcode"}
-  , {"order": 2,"heading": "Distance","obj_key": "distance"}
-  , {"order": 3,"heading": "Filling","obj_key": "price_filling"}
-  , {"order": 4,"heading": "Crown","obj_key": "price_crown"}
-  , {"order": 5,"heading": "Root Canal","obj_key": "price_root"}
+  , {"order": 1,"heading": "Distance","obj_key": "distance"}
+  , {"order": 2,"heading": "Filling","obj_key": "price_filling"}
+  , {"order": 3,"heading": "Crown","obj_key": "price_crown"}
+  , {"order": 4,"heading": "Root Canal","obj_key": "price_root"}
 ]
 
 
@@ -105,22 +104,9 @@ function loadTableHeader(dentistDataset) {
     //get corresponding column data attributes
     let dataColumn = TABLE_ORDER.filter(elem => elem["order"]==i)[0];
 
-    //create table header cell html with inner text and 
-    //desc-toggle attribute which will decide whether to sort ascending or descending
+    //create table header cell html with inner text
     let cellText = dataColumn["heading"];
-    let $column_header = $(`<div>`,{text:cellText,"desc-toggle":1});
-    
-      //add click->sort capabilities, except name column
-    if (dataColumn["obj_key"] != "name") {
-      $column_header.click(()=>{
-        
-        //once cell clicked, it will sort table by corresponding column
-        loadTableContent(dentistDataset,dataColumn["obj_key"],$column_header.attr("desc-toggle"));
-
-        //the desc-toggle will be toggled to the opposite
-        $column_header.attr("desc-toggle",parseInt($column_header.attr("desc-toggle"))*-1);
-      })
-    };
+    let $column_header = $(`<div>`,{text:cellText});
     
     //add child to heading row element
     $header.append($column_header);

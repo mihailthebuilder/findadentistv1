@@ -227,7 +227,6 @@ button {
 }
 
 #table-wrapper {
-  margin-top: 10rem;
   border: 3px solid #5a5859;
   border-radius: 0.2rem;
 }
@@ -235,14 +234,14 @@ button {
 .table-row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[7];
-      grid-template-columns: repeat(7, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 2.5px black;
 }
 
-.table-row div {
+.table-row > div {
   padding: 1rem 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,6 +252,22 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+}
+
+.table-row button {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 0.5px 0.5px black;
+  padding: 0.5rem 1rem;
+  background: #9db6b8;
+  border: 3px solid #fab7b9;
+}
+
+.table-row button:hover {
+  background: #fab7b9;
+  border-color: #5a5859;
 }
 
 .header {
@@ -265,6 +280,51 @@ button {
 
 .odd {
   background: #85c1c7;
+}
+
+.row-attribute {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #table-wrapper {
+    border: none;
+  }
+  .table-row.header {
+    display: none;
+  }
+  .even, .odd {
+    background: #45b1c9;
+  }
+  .table-row {
+    border: 3px solid #5a5859;
+    margin-top: 1.5rem;
+  }
+  .row-attribute {
+    display: block;
+  }
+  .table-row {
+    display: block;
+  }
+  .row-name {
+    background: #5a5859;
+    font-size: 1.3rem;
+  }
+  .row-distance, .row-filling, .row-crown, .row-root {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+  .row-distance, .row-crown {
+    background: #9db6b8;
+  }
+  .row-button {
+    background: #85c1c7;
+  }
+  .row-button button {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 576px) {
