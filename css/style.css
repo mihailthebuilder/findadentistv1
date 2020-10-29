@@ -227,6 +227,7 @@ button {
 }
 
 #table-wrapper {
+  display: none;
   border: 3px solid #5a5859;
   border-radius: 0.2rem;
 }

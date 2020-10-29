@@ -121,7 +121,9 @@ function loadTable(dentistDataset) {
   for (let i=0;i<sortedDentists.length;i++) {
 
     //generate row container with appropriate classes
-    let $row = $("<div>",{class: "table-row " +i%2==0? "even" : "odd"});
+    let evenVsOdd = i%2==0? "even" : "odd";
+
+    let $row = $("<div>",{class: "table-row " +evenVsOdd});
 
     //name column
     let $row_name = $("<div>",{class:"row-name",text:sortedDentists[i]["name"]});
@@ -130,25 +132,25 @@ function loadTable(dentistDataset) {
     //distance column
     let $row_distance = $("<div>",{class:"row-distance"});
     $row_distance.append($("<div>",{class:"row-attribute",text:"Distance:"}));
-    $row_distance.append($("<div>",{text:sortedDentists[i]["distance"]}));
+    $row_distance.append($("<div>",{text:sortedDentists[i]["distance"]+ " miles"}));
     $row.append($row_distance);
 
     //filling column
     let $row_filling = $("<div>",{class:"row-filling"});
     $row_filling.append($("<div>",{class:"row-attribute",text:"Filling:"}));
-    $row_filling.append($("<div>",{text:sortedDentists[i]["price_filling"]}));
+    $row_filling.append($("<div>",{text:"£ " + sortedDentists[i]["price_filling"]}));
     $row.append($row_filling);
 
     //crown column
     let $row_crown = $("<div>",{class:"row-crown"});
-    $row_crown.append($("<div>",{class:"row-crown",text:"Crown:"}));
-    $row_crown.append($("<div>",{text:sortedDentists[i]["price_crown"]}));
+    $row_crown.append($("<div>",{class:"row-attribute",text:"Crown:"}));
+    $row_crown.append($("<div>",{text:"£ " + sortedDentists[i]["price_crown"]}));
     $row.append($row_crown);
 
     //root column
     let $row_root = $("<div>",{class:"row-root"});
-    $row_distance.append($("<div>",{class:"row-root",text:"Root canal:"}));
-    $row_distance.append($("<div>",{text:sortedDentists[i]["price_root"]}));
+    $row_root.append($("<div>",{class:"row-attribute",text:"Root canal:"}));
+    $row_root.append($("<div>",{text:"£ " + sortedDentists[i]["price_root"]}));
     $row.append($row_root);
 
     //button column
