@@ -335,6 +335,20 @@ button {
   input {
     text-align: center;
   }
+}
+
+.form-submitted {
+  font-size: 1.2rem;
+  border: 3px solid $almond;
+  color: white;
+  background: $pacific-blue;
+  border-radius: 0.5rem;
+  
+  p {
+    margin: 1rem 1rem;
+    text-align: center;
+    font-weight: bold;
+  }
 
 }
 

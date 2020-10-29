@@ -363,6 +363,20 @@ button {
   text-align: center;
 }
 
+.form-submitted {
+  font-size: 1.2rem;
+  border: 3px solid #f2e3d4;
+  color: white;
+  background: #45b1c9;
+  border-radius: 0.5rem;
+}
+
+.form-submitted p {
+  margin: 1rem 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   #table-wrapper {
     border: none;
