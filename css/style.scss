@@ -276,7 +276,21 @@ button {
     text-align: center;
   }
 
-  
+  button {
+    margin-top: 0.5rem;
+    background: $middle-blue;
+    text-shadow: 1px 1px 2px black;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    border: 2px solid $davys-grey;
+    border-radius: 0.3rem;
+  }
+
+  button:hover {
+    background: $pacific-blue;
+    border: 2px solid $almond;
+  }
 
 }
 
@@ -442,6 +456,30 @@ button {
   .trigger {
     font-size: 1rem;
     display: inline-block;
+  }
+
+  #help-section {
+    form {
+      * {font-size: 1.1rem};
+      text-align: center;
+      button {
+        padding: 0.6rem 4rem;
+      }
+    }
+  }
+
+  .form-group {
+    width: auto;
+  }
+
+  .prices>div {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 0.5rem;
+
+    input {
+      text-align: left;
+    }
   }
 
 }
