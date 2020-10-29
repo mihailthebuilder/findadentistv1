@@ -1,3 +1,9 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 *, *:focus, *:hover {
   outline: none;
 }
@@ -124,7 +130,7 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 
 #hero-section h1 {
   color: white;
-  margin: 0;
+  margin: 0 0 1rem 0;
   font-size: 3rem;
   text-shadow: 1px 1px 4px black;
   font-weight: bold;
@@ -190,7 +196,6 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 #table-placeholder h2 {
   color: #45b1c9;
   text-shadow: 1px 1px 2px white;
-  margin-top: 0;
 }
 
 #table-placeholder button {
@@ -209,6 +214,7 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 
 h2 {
   font-size: 2rem;
+  margin-top: 0;
 }
 
 .trigger {
@@ -285,6 +291,60 @@ button {
 
 .row-attribute {
   display: none;
+}
+
+#help-section {
+  background: #9db6b8;
+}
+
+#help-section h2 {
+  color: white;
+  text-shadow: 1px 1px 2.5px black;
+  text-align: center;
+}
+
+.form-group {
+  font-size: 1.5rem;
+  width: 30rem;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input {
+  background: #f2e3d4;
+  border: 2px solid #5a5859;
+  font-size: 1.3rem;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+}
+
+.form-group input:focus {
+  background: white;
+  color: #5a5859;
+}
+
+.normal > input {
+  width: 100%;
+}
+
+.prices > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
+.prices > div input {
+  text-align: center;
 }
 
 @media (max-width: 768px) {

@@ -12,6 +12,13 @@ $nav-x-padding: 1.2rem;
 $nav-y-padding: 0.8rem;
 
 $table-border: 3px solid $davys-grey;
+$h2-shadow: 1px 1px 2.5px black;
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 
 @mixin placeholder {
   &::-webkit-input-placeholder {@content}
@@ -119,7 +126,7 @@ nav {
 
   h1 {
     color: white;
-    margin: 0;
+    margin: 0 0 1rem 0;
     font-size: 3rem;
     text-shadow: 1px 1px 4px black;
     font-weight: bold;
@@ -127,7 +134,7 @@ nav {
 
   h2 {
     color: $almond;
-    text-shadow: 1px 1px 2.5px black;
+    text-shadow: $h2-shadow;
     font-weight: bold;
   }
 
@@ -169,7 +176,6 @@ nav {
   h2 {
     color: $pacific-blue;
     text-shadow: 1px 1px 2px white;
-    margin-top: 0;
   }
 
   button {
@@ -190,6 +196,7 @@ nav {
 
 h2 {
   font-size: 2rem;
+  margin-top: 0;
 }
 
 .trigger {
@@ -260,6 +267,63 @@ button {
   display: none;
 }
 
+#help-section {
+  background: $opal;
+
+  h2 {
+    color: white;
+    text-shadow: $h2-shadow;
+    text-align: center;
+  }
+
+  
+
+}
+
+.form-group {
+
+  font-size: 1.5rem;
+  width: 30rem;
+  margin-bottom: 1rem;
+
+  label {
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: 0.3rem;
+  }
+
+  input {
+    background: $almond;
+    border: 2px solid $davys-grey; 
+    font-size: 1.3rem;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+  }
+
+  input:focus {
+    background: white;
+    color: $davys-grey;
+  }
+
+}
+
+.normal>input {
+  width: 100%;
+}
+
+.prices>div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 0.5rem;
+
+  input {
+    text-align: center;
+  }
+
+}
+
 //--------------BREAKPOINTS------------------------
 
 //tablets
@@ -291,7 +355,6 @@ button {
 
   .table-row {
     display: block;
-
   }
 
   .row-name {

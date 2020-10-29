@@ -115,8 +115,6 @@ function loadTable(dentistDataset) {
   //sort dentist table by key (distance)
   let sortedDentists = dentistDataset.map(a=>({...a})).sort((a,b)=>{return (a["distance"]-b["distance"])});
 
-  console.log(sortedDentists);
-
   //loop through dentist array to generate each row and add to table
   for (let i=0;i<sortedDentists.length;i++) {
 
