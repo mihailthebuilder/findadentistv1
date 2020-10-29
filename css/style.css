@@ -429,6 +429,14 @@ button {
   width: 100%;
 }
 
+footer {
+  background: #5a5859;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
 @media (max-width: 768px) {
   #table-wrapper {
     border: none;
@@ -561,6 +569,9 @@ button {
     margin-top: 2rem;
   }
   #about-section > div > div p {
+    text-align: center;
+  }
+  footer {
     text-align: center;
   }
 }

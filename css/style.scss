@@ -391,6 +391,15 @@ button {
   }
 }
 
+footer {
+  background: $davys-grey;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+
+}
+
 //--------------BREAKPOINTS------------------------
 
 //tablets
@@ -547,6 +556,10 @@ button {
         text-align: center;
       }
     }
+  }
+
+  footer {
+    text-align: center;
   }
 
 }
