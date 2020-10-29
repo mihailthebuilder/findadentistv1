@@ -39,6 +39,13 @@ $(() => {
     complete: ()=>{tableActivate(dentistFileData)}
   });
 
+  //when dentist form submitted, replace element with confirmation
+  $("#help-section>form").submit((event)=> {
+    console.log("got here");
+    event.preventDefault();
+    $(".to-hide").fadeOut(350,()=>{$("#form-submitted").fadeIn(350)});
+  });
+
 });
 
 

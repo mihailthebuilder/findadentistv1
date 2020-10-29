@@ -337,12 +337,14 @@ button {
   }
 }
 
-.form-submitted {
+#form-submitted {
+  transition: none;
   font-size: 1.2rem;
   border: 3px solid $almond;
   color: white;
   background: $pacific-blue;
   border-radius: 0.5rem;
+  display: none;
   
   p {
     margin: 1rem 1rem;
@@ -350,6 +352,10 @@ button {
     font-weight: bold;
   }
 
+}
+
+.to-hide {
+  transition: none;
 }
 
 //--------------BREAKPOINTS------------------------

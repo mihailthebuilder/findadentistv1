@@ -363,18 +363,26 @@ button {
   text-align: center;
 }
 
-.form-submitted {
+#form-submitted {
+  -webkit-transition: none;
+  transition: none;
   font-size: 1.2rem;
   border: 3px solid #f2e3d4;
   color: white;
   background: #45b1c9;
   border-radius: 0.5rem;
+  display: none;
 }
 
-.form-submitted p {
+#form-submitted p {
   margin: 1rem 1rem;
   text-align: center;
   font-weight: bold;
+}
+
+.to-hide {
+  -webkit-transition: none;
+  transition: none;
 }
 
 @media (max-width: 768px) {
