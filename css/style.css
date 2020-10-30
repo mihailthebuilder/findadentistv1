@@ -108,7 +108,7 @@ nav a:hover, nav a:active, nav #dropdown-wrapper:hover, nav #dropdown-wrapper:ac
 
 #hero-section {
   height: 85vh;
-  background-image: linear-gradient(115deg, rgba(133, 193, 199, 0.4), rgba(133, 193, 199, 0.4)), url("./img/hero.jpeg");
+  background-image: linear-gradient(115deg, rgba(133, 193, 199, 0.4), rgba(133, 193, 199, 0.4)), url("https://mihailthebuilder.github.io/findadentistv1/img/hero.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
