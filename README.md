@@ -130,7 +130,7 @@ In desktop mode, the `row-attribute` selector's `display` style is set to none, 
 ![responsive](./demo/responsive.gif)
 
 ## Mobile nav dropdown
-![navbar](./demo/navbar/gif)
+![navbar](./demo/navbar.gif)
 
 Easy-peasy with jQuery:
 
