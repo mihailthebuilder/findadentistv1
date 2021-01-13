@@ -125,10 +125,38 @@ You'll notice in [step 4 above](#step-4) that labels are added to each of the pr
 $row_root.append($("<div>",{class:"row-attribute",text:"Root canal:"}));
 ```
 
-In desktop mode, the `row-attribute` selector's `display` style is set to none, while in tablet/mobile it is `block`. This helps create the optimal user experience for viewing the table across different devices:
+In desktop mode, the `row-attribute` selector's `display` style is set to none, while in tablet/mobile it is `block`. This helps create the optimal user experience for viewing the table across different devices.
 
 ![responsive](./demo/responsive.gif)
 
+## Mobile nav dropdown
+![navbar](./demo/navbar/gif)
 
+Easy-peasy with jQuery:
 
-### main functionality
+```js
+//on click...
+$("#dropdown-wrapper").click(()=>{
+  //...slide down/up the navbar
+  $("#right-nav-wrapper").slideToggle();
+  //flip the arrow image
+  $("#dropdown-wrapper>img").toggleClass("flip");
+});
+```
+
+## Sass @mixin + @include
+Used for changing the colour of the placeholder text in the postcode input element:
+```scss
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+input {
+  @include placeholder {color: $pacific-blue};
+  width: 9.5rem;
+  margin-right: 1rem;
+  color: $pacific-blue;
+}
+```
