@@ -1,7 +1,7 @@
 # Find A Dentist
 
 ## Overview
-A static landing page made to look like a marketplace for dental practices. Built using [Sass](https://sass-lang.com/) and [jQuery](https://jquery.com/).
+A static landing page made to look like a marketplace for dental practices. Built using [Sass](https://sass-lang.com/) and [jQuery](https://jquery.com/). See it live [here](https://mihailthebuilder.github.io/findadentistv1/).
 
 ## Highlights
 
