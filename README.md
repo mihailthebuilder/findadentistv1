@@ -1,3 +1,16 @@
+- [Find A Dentist](#find-a-dentist)
+  - [Overview](#overview)
+  - [Highlights](#highlights)
+    - [Simulation of dental practices directory](#simulation-of-dental-practices-directory)
+      - [Step 1](#step-1)
+      - [Step 2](#step-2)
+      - [Step 3.a](#step-3a)
+      - [Step 3.b](#step-3b)
+      - [Step 4](#step-4)
+  - [Mobile-friendly table](#mobile-friendly-table)
+  - [Mobile nav dropdown](#mobile-nav-dropdown)
+  - [Sass @mixin + @include](#sass-mixin--include)
+
 # Find A Dentist
 
 ## Overview
